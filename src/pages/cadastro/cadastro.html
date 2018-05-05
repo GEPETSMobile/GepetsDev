@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title style="text-align: center">
+      <strong>Cadastro</strong>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <!-- Fazer as devidas validações dos campos -->
+    <ion-item>
+      <ion-label stacked>Nome:</ion-label>
+      <ion-input name="nome" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Data de nascimento</ion-label>
+      <ion-input name="data_nascimento" type="date"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Genêro</ion-label>
+      <ion-select [(ngModel)]="genero">
+        <ion-option value="f">Feminino</ion-option>
+        <ion-option value="m">Masculino</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Peso</ion-label>
+      <ion-input name="peso" type="number" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Altura</ion-label>
+      <ion-input name="altura" type="number"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button  round color='secondary' full end (click)="chamadaAvaliacao()">
+    Iniciar Avaliação
+  </button>
+</ion-content>
